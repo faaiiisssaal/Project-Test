@@ -1,11 +1,59 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Your Webpage</title>
+</head>
+<body>
+    <header>
+        <h1>Header of the Webpage</h1>
+    </header>
 
-<html>
-    <head></head>
-    <body>
-        <header>Test 1 Lalala Ya Gitu Dhahahaerg</header>
-        <main>INI BODY</main>
-        <aside>INI TANGAN</aside>
-        <footer>INI KAKI</footer>
-    </body>
+    <main>
+        <section class="body1">
+            <h2>Body 1</h2>
+            <p>This is the content of Body 1.</p>
+        </section>
+
+        <section class="body2">
+            <h2>Body 2</h2>
+            <p>This is the content of Body 2.</p>
+        </section>
+
+        <section class="body3">
+            <h2>Body 3</h2>
+            <form id="data-form">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender" required>
+                    <option value="Laki-Laki">Male</option>
+                    <option value="Perempuan">Female</option>
+                </select>
+
+                <label for="calendar">Tanggal</label>
+                <input type="date" id="calendar" name="calendar" value="<?php echo date('Y-m-d'); ?>" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section class="body4" id="data-table-section">
+            <h2>Submitted Data</h2>
+            <div class="card-container" id="card-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Footer of the Webpage</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
