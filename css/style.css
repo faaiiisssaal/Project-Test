@@ -1,0 +1,141 @@
+/* Apply some basic styling to make the webpage look presentable */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+section {
+    flex-basis: calc(50% - 20px); /* Updated flex-basis for both body1 and body2 */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.body1 {
+    flex-basis: 100%;
+}
+
+/* Update body2 and body1 to stretch to full width */
+.body2 {
+    flex-basis: 100%;
+    font-size: 0.8em;
+}
+
+/* Update body3 and body4 for different screen sizes */
+@media (min-width: 1024px) {
+    .body3, .body4 {
+        flex-basis: calc(50% - 20px);
+    }
+    
+    /* Add padding to form elements inside body3 */
+    .body3 form {
+        padding: 10px;
+    }
+
+    /* Make name, calendar, gender, and message fit to submit button width */
+    .body3 form label,
+    .body3 form input[type="text"],
+    .body3 form select,
+    .body3 form input[type="date"],
+    .body3 form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adjust submit button width */
+    .body3 form input[type="submit"] {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Add styles for tablet mode */
+@media (max-width: 1023px) {
+    .body3, .body4 {
+        flex-basis: 100%;
+        padding: 10px; /* Add padding to sections in tablet mode */
+    }
+
+    /* Add padding to sections in tablet mode */
+    .body3, .body4 {
+        padding: 10px;
+    }
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for card layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.data-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Style for scrolling the submitted data */
+.data-table {
+    overflow-y: auto;
+    max-height: 300px; /* Adjust the maximum height as needed */
+    padding: 10px; /* Add padding to the data table */
+}
+
+.data-card {
+    margin-bottom: 10px;
+}
+
+/* Add a separate class to make the submitted data visible */
+.data-visible {
+    display: block;
+}
+
+/* Add the following style for table header alignment */
+#data-table th {
+    text-align: left;
+}
